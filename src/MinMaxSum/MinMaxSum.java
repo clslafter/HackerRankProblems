@@ -1,16 +1,10 @@
 package MinMaxSum;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /*
  * Given five positive integers, find the minimum and maximum 
@@ -19,14 +13,9 @@ import static java.util.stream.Collectors.toList;
  * values as a single line of two space-separated long integers.
  */
 
-class Result {
-
-	/*
-	 * Complete the 'miniMaxSum' function below.
-	 *
-	 * The function accepts INTEGER_ARRAY arr as parameter.
-	 */
-
+public class MinMaxSum {
+	
+	
 	public static void miniMaxSum(List<Integer> arr) {
 		// Write your code here
 
@@ -64,19 +53,17 @@ class Result {
 		}
 		System.out.println(minSum + " " + maxSum);
 	}
-}
-
-public class Solution {
-	public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
-        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-            .map(Integer::parseInt)
-            .collect(toList());
-
+	
+	public static void main (String[] args) {
 		
-		Result.miniMaxSum(arr);
-
-        bufferedReader.close();
+		List<Integer> testArray = Arrays.asList(1,2,3,4,5);
+		
+		System.out.println("Testing solution. Min should be 10, max should be 14.");
+		
+		miniMaxSum(testArray);
+		
+		
+		
 	}
+
 }
