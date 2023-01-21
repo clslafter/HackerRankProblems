@@ -43,6 +43,8 @@ public class addBinary {
 		 
 	    }
 	 public static void main(String args[]) {
+		 
+		 System.out.println("Testing solution. Should be 101110");
 
 		 System.out.println(addBinary("10001", "11101"));
 	 }

@@ -53,6 +53,8 @@ public class Pangrams {
 
     	String testString = "The quick brown fox jumps over the lazy dog";
     	
+    	System.out.println("Testing solution. Should be pangram");
+    	
 		 System.out.println(pangrams(testString));
 	 }
 
