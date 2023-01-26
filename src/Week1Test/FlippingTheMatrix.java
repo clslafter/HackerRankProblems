@@ -19,58 +19,59 @@ matrix's upper-left quadrant is maximal.
 public class FlippingTheMatrix {
 
 	/*
-     * Complete the 'flippingMatrix' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts 2D_INTEGER_ARRAY matrix as parameter.
-     */
-	
+	 * Complete the 'flippingMatrix' function below.
+	 *
+	 * The function is expected to return an INTEGER. The function accepts
+	 * 2D_INTEGER_ARRAY matrix as parameter.
+	 */
+
 	public static int flippingMatrix(List<List<Integer>> matrix) {
-		//Not necessary to actually flip the rows or columns.
+		// Not necessary to actually flip the rows or columns.
 		// For each position in matrix nxn, find the largest integer in the possible
-		//mirrored positions and then sum them up.
-		
+		// mirrored positions and then sum them up.
+
 		// Since the matrix is 2nX2n, the n is found by dividing by 2
-		int n = matrix.size()/2;
+		int n = matrix.size() / 2;
 		int maxSum = 0;
-		//i,j<n because we're only dealing with the sum of the numbers in the nXn matrix
-		for (int i = 0; i < n ; i++) {
-		    for(int j = 0; j < n ; j++) {
-		    	//Bottom right mirrored position of the matrix
-		            int num4 = matrix.get((matrix.size() - 1 - i)).get(matrix.size() - 1 - j);
-		         //Bottom left mirrored position of the matrix   
-		            int num3 = matrix.get((matrix.size() - 1 - i)).get(j);
-		           //Top right mirrored position of the matrix
-		            int num2 = matrix.get((i)).get(matrix.size() - 1 - j);
-		           //Top left actual position in the nXn matrix
-		            int num1 = matrix.get((i)).get(j);
-		          //Add the largest number of the 4 to the Sum for the n positions
-		            maxSum += Math.max(num1, Math.max(num2, Math.max(num3, num4)));
-		} }
-		    return maxSum;
+		// i,j<n because we're only dealing with the sum of the numbers in the nXn
+		// matrix
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				// Bottom right mirrored position of the matrix
+				int num4 = matrix.get((matrix.size() - 1 - i)).get(matrix.size() - 1 - j);
+				// Bottom left mirrored position of the matrix
+				int num3 = matrix.get((matrix.size() - 1 - i)).get(j);
+				// Top right mirrored position of the matrix
+				int num2 = matrix.get((i)).get(matrix.size() - 1 - j);
+				// Top left actual position in the nXn matrix
+				int num1 = matrix.get((i)).get(j);
+				// Add the largest number of the 4 to the Sum for the n positions
+				maxSum += Math.max(num1, Math.max(num2, Math.max(num3, num4)));
+			}
 		}
-	
-	 public static void main(String[] args) {
+		return maxSum;
+	}
 
-	       List <List<Integer>> testMatrix = Arrays.asList(Arrays.asList(112,42,83,119),Arrays.asList(56,125,56,49),Arrays.asList(15,78,101,43),Arrays.asList(62,98,114,108));
-	      
-	        System.out.println("Testing solution. Should be 414");
-	        System.out.println(flippingMatrix(testMatrix));
-	        
-	        
-	        List<Integer> row1 = Arrays.asList(6, 5, 6, 2, 7, 3);
-			   List<Integer> row2 = Arrays.asList(2, 8, 8, 2, 7, 3);
-			   List<Integer> row3 = Arrays.asList(9, 6, 5, 2, 2, 5);
-			   List<Integer> row4 = Arrays.asList(3, 6, 2, 2, 5, 8);
-			   List<Integer> row5 = Arrays.asList(8, 1, 6, 7, 6, 3);
-			   List<Integer> row6 = Arrays.asList(8, 7, 7, 6, 2, 2);
-			   
-			   List<List<Integer>> matrix = Arrays.asList(row1, row2, row3, row4, row5, row6);
-			   
-			   System.out.println("Testing solution. Should be 66");
-		        System.out.println(flippingMatrix(matrix));
+	public static void main(String[] args) {
 
-	    }
-	
-	
+		List<List<Integer>> testMatrix = Arrays.asList(Arrays.asList(112, 42, 83, 119), Arrays.asList(56, 125, 56, 49),
+				Arrays.asList(15, 78, 101, 43), Arrays.asList(62, 98, 114, 108));
+
+		System.out.println("Testing solution. Should be 414");
+		System.out.println(flippingMatrix(testMatrix));
+
+		List<Integer> row1 = Arrays.asList(6, 5, 6, 2, 7, 3);
+		List<Integer> row2 = Arrays.asList(2, 8, 8, 2, 7, 3);
+		List<Integer> row3 = Arrays.asList(9, 6, 5, 2, 2, 5);
+		List<Integer> row4 = Arrays.asList(3, 6, 2, 2, 5, 8);
+		List<Integer> row5 = Arrays.asList(8, 1, 6, 7, 6, 3);
+		List<Integer> row6 = Arrays.asList(8, 7, 7, 6, 2, 2);
+
+		List<List<Integer>> matrix = Arrays.asList(row1, row2, row3, row4, row5, row6);
+
+		System.out.println("Testing solution. Should be 66");
+		System.out.println(flippingMatrix(matrix));
+
+	}
+
 }
