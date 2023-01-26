@@ -1,5 +1,6 @@
 package Week1Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -55,6 +56,19 @@ public class FlippingTheMatrix {
 	      
 	        System.out.println("Testing solution. Should be 414");
 	        System.out.println(flippingMatrix(testMatrix));
+	        
+	        
+	        List<Integer> row1 = Arrays.asList(6, 5, 6, 2, 7, 3);
+			   List<Integer> row2 = Arrays.asList(2, 8, 8, 2, 7, 3);
+			   List<Integer> row3 = Arrays.asList(9, 6, 5, 2, 2, 5);
+			   List<Integer> row4 = Arrays.asList(3, 6, 2, 2, 5, 8);
+			   List<Integer> row5 = Arrays.asList(8, 1, 6, 7, 6, 3);
+			   List<Integer> row6 = Arrays.asList(8, 7, 7, 6, 2, 2);
+			   
+			   List<List<Integer>> matrix = Arrays.asList(row1, row2, row3, row4, row5, row6);
+			   
+			   System.out.println("Testing solution. Should be 66");
+		        System.out.println(flippingMatrix(matrix));
 
 	    }
 	
