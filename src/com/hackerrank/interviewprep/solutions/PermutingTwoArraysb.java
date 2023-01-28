@@ -1,7 +1,6 @@
-package PermutingTwoArrays;
+package com.hackerrank.interviewprep.solutions;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /*

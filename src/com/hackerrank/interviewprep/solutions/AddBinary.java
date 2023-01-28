@@ -1,5 +1,5 @@
-package AddBinary;
-public class addBinary {
+package com.hackerrank.interviewprep.solutions;
+public class AddBinary {
 	
 	/*
 	 * work from back to front

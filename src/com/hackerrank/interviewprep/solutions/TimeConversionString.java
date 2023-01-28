@@ -1,7 +1,4 @@
-package TimeConversion;
-
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+package com.hackerrank.interviewprep.solutions;
 
 /*
  * Given a time in -hour AM/PM format, convert it to military (24-hour) time.

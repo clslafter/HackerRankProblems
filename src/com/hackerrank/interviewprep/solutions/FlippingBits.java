@@ -1,7 +1,4 @@
-package FlippingBits;
-
-import java.util.Arrays;
-import java.util.List;
+package com.hackerrank.interviewprep.solutions;
 
 /*
  * You will be given a list of 32 bit unsigned integers. 

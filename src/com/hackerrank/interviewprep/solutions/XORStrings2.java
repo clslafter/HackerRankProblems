@@ -1,4 +1,4 @@
-package XORStrings2;
+package com.hackerrank.interviewprep.solutions;
 
 
 /*

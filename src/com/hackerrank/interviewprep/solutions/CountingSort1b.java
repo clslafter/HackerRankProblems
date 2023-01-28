@@ -1,6 +1,5 @@
-package CountingSort1;
+package com.hackerrank.interviewprep.solutions;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package DiagonalDifference;
+package com.hackerrank.interviewprep.solutions;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -44,7 +44,7 @@ public class DiagonalDifference {
     	
     	System.out.println("Testing 2d Array.asList");
     	
-    	Iterator itr=testArray2d.iterator();
+    	Iterator<List<Integer>> itr=testArray2d.iterator();
 	      while(itr.hasNext())
 	        {
 	          Object arr = itr.next();

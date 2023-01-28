@@ -1,8 +1,6 @@
-package ZigZagSequence;
+package com.hackerrank.interviewprep.solutions;
 
 import java.util.Arrays;
-import java.util.List;
-
 /*
  * In this challenge, the task is to debug the existing code 
  * to successfully execute all provided test files.

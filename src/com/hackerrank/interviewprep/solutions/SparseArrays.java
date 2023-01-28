@@ -1,4 +1,4 @@
-package SparseArrays;
+package com.hackerrank.interviewprep.solutions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
